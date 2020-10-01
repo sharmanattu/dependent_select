@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script>
+        function random_function()
+        {
+            var a=document.getElementById("input").value;
+            if(a==="Gender")
+            {
+                var arr=["Male","Female","Undefined"];
+            }
+            else if(a==="Status")
+            {
+                var arr=["Single","Married","Divorced","Widow"];
+            }
+            else{
+                var arrar =[];
+            }
+         
+            var string="";
+         
+            for(i=0;i<arr.length;i++)
+            {
+                string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+            }
+
+            document.getElementById("output").innerHTML=string;
+        }
+    </script>
+</head>
+<body>
+    <br /><br />
+    <div class="container" style="width:600px;">
+     <h2 align="center">User Detail </h2><br /><br />  
+    <select id="input" onchange="random_function()" class="form-control input-lg">
+    <option>Select </option>
+    <option>Gender </option>
+    <option>Status </option>
+</select>
+<br/>
+<div >
+    <select id ="output"onchange="random_function1()" class="form-control input-lg">
+        <option>choose </option>
+</select>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
